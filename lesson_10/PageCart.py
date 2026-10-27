@@ -11,6 +11,7 @@ class PageCart:
         """
         Конструктор класса PageCart
         :param driver: WebDriver - объект драйвера Selenium
+        :return: None
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
@@ -36,6 +37,7 @@ class PageCart:
     def checkout(self) -> None:
         """
         Нажимает на кнопку Checkout
+        :return: None
         """
         checkout_btn = self.wait.until(EC.presence_of_element_located(
             (By.ID, "checkout")

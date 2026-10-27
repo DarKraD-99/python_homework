@@ -23,6 +23,7 @@ def test_result_calc(driver):
     """
     Тест проверяет функционал калькулятора с опцией сложения
     :param driver: WebDriver - объект драйвера, переданный фикстурой
+    :return: None
     """
     page_calc = PageCalc(driver)
     with allure.step("Открытие страницы калькулятора"):

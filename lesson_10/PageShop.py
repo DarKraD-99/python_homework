@@ -9,6 +9,7 @@ class PageShop:
         """
         Конструктор класса PageShop
         :param driver: WebDriver - объект драйвера Selenium
+        :return: None
         """
         self.driver = driver
 
@@ -16,6 +17,7 @@ class PageShop:
     def backpack(self) -> None:
         """
         Нажимает на кнопку добавления в корзину рюкзака
+        :return: None
         """
         backpack_buy = self.driver.find_element(
             By.ID, "add-to-cart-sauce-labs-backpack"
@@ -26,6 +28,7 @@ class PageShop:
     def bolt_t(self) -> None:
         """
         Нажимает на кнопку добавления в корзину футболки
+        :return: None
         """
         bolt_t_buy = self.driver.find_element(
             By.ID, "add-to-cart-sauce-labs-bolt-t-shirt"
@@ -36,6 +39,7 @@ class PageShop:
     def onesie(self) -> None:
         """
         Нажимает на кнопку добавления в корзину комбинезона
+        :return: None
         """
         onesie_buy = self.driver.find_element(
             By.ID, "add-to-cart-sauce-labs-onesie"
@@ -46,6 +50,7 @@ class PageShop:
     def cart(self) -> None:
         """
         Нажимает на корзину
+        :return: None
         """
         cart_buy = self.driver.find_element(
             By.CLASS_NAME, "shopping_cart_link"

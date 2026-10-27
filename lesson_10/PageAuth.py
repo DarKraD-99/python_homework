@@ -11,6 +11,7 @@ class PageAuth:
         """
         Конструктор класса PageAuth
         :param driver: WebDriver - объект драйвера Selenium
+        :return: None
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
@@ -19,6 +20,7 @@ class PageAuth:
     def open(self) -> None:
         """
         Открывает страницу авторизации
+        :return: None
         """
         self.driver.get("https://www.saucedemo.com/")
 
@@ -26,6 +28,7 @@ class PageAuth:
     def input_login(self) -> None:
         """
         Вводит логин для авторизации
+        :return: None
         """
         input_login = self.driver.find_element(By.ID, "user-name")
         input_login.send_keys("standard_user")
@@ -34,6 +37,7 @@ class PageAuth:
     def input_password(self) -> None:
         """
         Вводит пароль для авторизации
+        :return: None
         """
         input_password = self.driver.find_element(By.ID, "password")
         input_password.send_keys("secret_sauce")
@@ -42,6 +46,7 @@ class PageAuth:
     def login_button(self) -> None:
         """
         Нажимает на кнопку авторизации
+        :return: None
         """
         login_btn = self.wait.until(EC.presence_of_element_located(
             (By.ID, "login-button")

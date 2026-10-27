@@ -11,6 +11,7 @@ class PageCalc:
         """
         Конструктор класса PageCalc
         :param driver: WebDriver - объект драйвера Selenium
+        :return: None
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 50)
@@ -19,6 +20,7 @@ class PageCalc:
     def open(self) -> None:
         """
         Открывает страницу калькулятора
+        :return: None
         """
         self.driver.get(
             "https://bonigarcia.dev/selenium-webdriver-java/"
@@ -29,6 +31,7 @@ class PageCalc:
     def delay_input(self) -> None:
         """
         Устанавливает задержку для выполнения операции
+        :return: None
         """
         delay = self.driver.find_element(By.ID, "delay")
         delay.clear()
@@ -38,6 +41,7 @@ class PageCalc:
     def btn_seven(self) -> None:
         """
         Нажимает на кнопку '7' на калькуляторе
+        :return: None
         """
         btn_seven = self.wait.until(EC.presence_of_element_located(
             (By.XPATH, "//span[text()='7']")
@@ -48,6 +52,7 @@ class PageCalc:
     def btn_plus(self) -> None:
         """
         Нажимает на кнопку '+' на калькуляторе
+        :return: None
         """
         btn_plus = self.wait.until(EC.presence_of_element_located(
             (By.XPATH, "//span[text()='+']")
@@ -58,6 +63,7 @@ class PageCalc:
     def btn_eight(self) -> None:
         """
         Нажимает на кнопку '8' на калькуляторе
+        :return: None
         """
         btn_eight = self.wait.until(EC.presence_of_element_located(
             (By.XPATH, "//span[text()='8']")
@@ -68,6 +74,7 @@ class PageCalc:
     def btn_equal(self) -> None:
         """
         Нажимает на кнопку '=' на калькуляторе
+        :return: None
         """
         btn_equal = self.wait.until(EC.presence_of_element_located(
             (By.XPATH, "//span[@class='btn btn-outline-warning']")

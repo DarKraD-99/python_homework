@@ -11,6 +11,7 @@ class PageCheckout:
         """
         Конструктор класса PageCheckout
         :param driver: WebDriver - объект драйвера Selenium
+        :return: None
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
@@ -19,6 +20,7 @@ class PageCheckout:
     def input_forms(self) -> None:
         """
         Заполняет форму личными данными
+        :return: None
         """
         input_forms = self.driver.find_elements(By.CLASS_NAME, "form_input")
         forms = [
@@ -33,6 +35,7 @@ class PageCheckout:
     def continue_btn(self) -> None:
         """
         Нажимает на кнопку 'continue'
+        :return: None
         """
         continue_btn = self.wait.until(EC.presence_of_element_located(
             (By.ID, "continue")
